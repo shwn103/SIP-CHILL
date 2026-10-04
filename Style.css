@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Footer */
+.footer{
+    background-color: #f3e7e7;
+    min-height: 249px;
+    padding:55px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Left */
+.brand{
+    width: 45%;
+}
+
+.brand h2{
+    font-size: 18px;
+    color: #2d241f;
+    margin-bottom: 10px;
+}
+
+.brand p{
+    font-size: 14px;
+    color: #8c8178;
+}
+
+.social-icons{
+    display: flex;
+    gap:18px;
+    margin-top: ;
+}
+
+/* Right */
+.links{
+    
+}
