@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+    /* Header */
+    header{
+        height: 75px;
+        background-color: #f3e7e7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+        /* Logo */
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+
+            .logo h1{
+                font-family: 'Kodchasan', sans-serif;
+                font-size: 30px;
+                font-weight: 300;
+                letter-spacing: -2px;
+                text-shadow: 2px 2px 2px #999;
+            }
+
+            .logo a{
+                text-decoration: none;
+                color: #2d241f;
+            }
+            
+            .logo-img{
+                width: 110px;
+                height: 90px;
+                object-fit: contain;
+                align-items: center;
+            }
+        
+        /*navigation bar*/
+        nav{
+            display: flex;
+            gap: 28px;
+        }
+
+                nav a{
+                    text-decoration: none;
+                    color: #2d241f;
+                    font-size: 14px;
+                    padding: 5px 0px;
+                }
+
+                nav a:hover{
+                    color: #8c8178;
+            }
+
+        /* Hero Section */
+        .hero{ 
+            height: 286px;
+            background-image: url('Hero 1.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+            .content{
+                position: absolute;
+                left: 9%;
+                top: 30px;
+            }
+            .hero h2{
+                font-family: 'Inspiration', cursive;
+                font-weight: 400;
+                font-size: 60px;
+                color: white;
+            }
+            .btn{
+                display: inline-block;
+                background-color: #4b2601;
+                color: white;
+                text-decoration: none;
+                border-radius: 7px;
+                margin-top: 19px;
+                padding: 10px 14px;
+            }
+    
+    /* Featured Section */
+    .featured-section{
+        width: 90%;
+        max-width: 1100px;   
+        margin: 25px auto 0; 
+    }
+
+    .featured-title{
+        font-family: Cursive;
+        font-size: 35px;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+        /*grid layout for featured items*/
+        .featured-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .left-items{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /*card layout for featured items*/
+        .item{
+            background-color: #faf4eb;
+            padding:12px 20px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /*Iced Tea*/
+        .Iced-Tea{
+            height: 247px;
+        }
+
+        /*mocha*/
+        .Cafe-Mocha{
+            height: 247px;
+        }
+
+        /*chocolate drizzle croissant*/
+        .Chocolate-Drizzle-Croissant{   
+            height: 513px;
+        }   
+
+        /*item title*/  
+        .item h3{
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .Chocolate-Drizzle-Croissant h3{
+            margin-top: 15px;
+        }
+            
+
+
+    /* Footer */
+    .footer{
+        background-color: #f3e7e7;
+        min-height: 249px;
+        padding:55px 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+        /* Left part of footer */
+        .brand{
+            width: 45%;
+        }
+
+            .brand h2{
+                font-size: 18px;
+                color: #2d241f;
+                margin-bottom: 10px;
+            }
+
+            .brand p{
+                font-size: 14px;
+                color: #8c8178;
+            }
+
+            .social-icons{
+                display: flex;
+                gap:18px;
+                margin-top: 20px; 
+            }
+
+        /* Right part of footer */
+        .links{
+            display: flex;
+            gap: 75px;
+            padding-right: 45px;
+        }
+
+            .column h3{
+                font-size: 11px;
+                color: #2d241f;
+                margin-bottom: 10px;
+            }
+
+            .column a{
+                display: block;
+                text-decoration: none;
+                color: #8c8178;
+                font-size: 11px;
+            }
+
+            .column a::before{
+                content: "→";
+                padding-right: 5px;
+            }
+            .column a:hover{
+                color: #2d241f;
+            }
+    
+
+
+    /* Media Queries */
+
+    /*tablet*/
+    @media (max-width: 768px){
+    }
+    
+    /*mobile*/  
+    @media (max-width: 480px){
+    }   
+        

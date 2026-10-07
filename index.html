@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <!-- fonts pare-->
-    <link href="https://googleapis.com" rel="stylesheet">
+     <!-- fonts pare -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Kodchasan:wght@300&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="style.css">
     <title>Home Page</title>
 </head>
 <body>
@@ -29,8 +31,8 @@
     <!-- Hero Section, explore menu, p -->
     <section class="hero">
             <div class="content">
-                <h2>A place that<br>
-                feels like home</h2>
+                <h2>A Place that<br>
+                feels like Home</h2>
 
                 <a href="menu.html" class="btn"><button>Explore Menu</button></a>
             </div> 
@@ -39,13 +41,13 @@
 
     <!-- Featured Section -->
     <section class="featured-section">
-        <h2>Featured Items</h2>
+        <h2 class="featured-title">Featured Items</h2>
 
             <div class="featured-grid">
 
                 <div class="left-items">
 
-                    <div class="item1">
+                    <div class="item Iced-Tea">
 
                         <h3>Classic Iced-Tea</h3>
                             <!-- img ng ice tea-->
@@ -53,7 +55,7 @@
                             <p>Refreshing brewed tea served chilled over ice for a crisp, revitalizing sip.</p>
                     </div>
 
-                    <div class="item2">
+                    <div class="item Cafe-Mocha">
                         <h3>Cafe Mocha</h3>
                             <!-- img ng mocha -->
                             <img src="" alt="Cafe Mocha">
@@ -63,10 +65,10 @@
 
                 <div class="right-items">
                     
-                    <div class="item3">
+                    <div class="item Chocolate-Drizzle-Croissant">
                         <h3>Chocolate Drizzle Croissant</h3>
                             <!-- img ng chocolate drizzle croissant -->
-                            <img src="" alt="Chocolate Drizzle Croissant">
+                            <img src="Chocolate_Drizzled_Croissant.jpeg" alt="Chocolate Drizzle Croissant">
                             <p>Buttery, flaky pastry finished with a generous drizzle of rich chocolate.</p>
                     </div>
 
@@ -75,37 +77,117 @@
             </div> 
     </section>
 
+    <!-- FAQ section -->
     <section class="FAQ">
         <div class="FAQ-header">
             <h2 class="FAQ - title">Frequently Asked Questions (FAQs)</h2>
         </div>
 
         <div class = "FAQ-list">
+            <!-- FAQ Item 1 -->
             <div class="FAQ-item">
 
                 <button class="FAQ-question">
                     <span class="FAQ-icon">●</span>
 
                     <span class="Question">How is Sip and Chill different from other coffee shops?</span>
-                </button>>
+
+                    <span class="FAQ-arrow">▼</span>
+                </button>
 
                 <div class="FAQ-answer">
                     <p>We focus on creating a relaxed, home-like atmosphere where you're welcome to stay as long as you like, whether you're grabbing a quick cup or settling in for the afternoon.</p>
+                </div>
             </div>
+        
+            <!-- FAQ Item 2 -->
+            <div class="FAQ-item">
+                <button class="FAQ-question">
+                    <span class="FAQ-icon">◆</span>
+
+                    <span class="Question">Do you offer Wi-Fi and seating for working or studying?</span>
+                    
+                    <span class="FAQ-arrow">▼</span>
+                </button>
+
+                <div class="FAQ-answer">
+                    <p>Yes! We have free Wi-Fi and plenty of seating for 
+                    anyone who wants to work, study, or just hang out.</p>
+                </div>
+
+            </div>
+
+            <!-- FAQ Item 3 -->
+             <div class="FAQ-item">
+                <button class="FAQ-question">
+                    <span class="FAQ-icon">▲</span>
+
+                    <span class="Question">What are your hours?</span>
+                    
+                    <span class="FAQ-arrow">▼</span>
+                </button>
+
+                <div class="FAQ-answer">
+                    <p>Monday to Saturday: 10:00 AM to 2:00 AM<br>
+                    Sunday: 10:00 AM to 10:00 PM</p>
+                </div>
+
+            </div>
+
+            <!-- FAQ Item 4 -->
+             <div class="FAQ-item">
+                <button class="FAQ-question">
+                    <span class="FAQ-icon">●</span>
+
+                    <span class="Question">Can I charge my phone or laptop there?</span>
+                    
+                    <span class="FAQ-arrow">▼</span>
+                </button>
+
+                <div class="FAQ-answer">
+                    <p> Yes, we have outlets available for customers who
+                    need to charge their devices while they visit.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+             <div class="FAQ-item">
+                <button class="FAQ-question">
+                    <span class="FAQ-icon">◆</span>
+
+                    <span class="Question">Do you have non-coffee options?</span>
+                    
+                    <span class="FAQ-arrow">▼</span>
+                </button>
+
+                <div class="FAQ-answer">
+                    <p>Yes, we offer teas, non-caffeinated drinks, and a few
+                    light snacks for anyone who isn't in the mood for coffee.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+             <div class="FAQ-item">
+                <button class="FAQ-question">
+                    <span class="FAQ-icon">▲</span>
+
+                    <span class="Question">How can I stay updated?</span>
+                    
+                    <span class="FAQ-arrow">▼</span>
+                </button>
+
+                <div class="FAQ-answer">
+                    <p>Follow us on Instagram and Facebook @sipandchillcafe
+                    for our latest updates, promos, and announcements.</p>
+                </div>
         </div>
+
+
     </section>
 
 
 
 
-
-
-
-
-
-
-
-    
     <!-- Footer -->
     <footer class="footer">
         <div class="brand">
