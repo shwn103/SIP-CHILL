@@ -7,8 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Kodchasan:wght@300&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+    <!-- icons pare -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
     <title>Home Page</title>
 </head>
 <body>
@@ -34,7 +35,7 @@
                 <h2>A Place that<br>
                 feels like Home</h2>
 
-                <a href="menu.html" class="btn"><button>Explore Menu</button></a>
+                <a href="menu.html" class="btn">Explore Menu</a>
             </div> 
             
     </section>
@@ -51,19 +52,19 @@
 
                         <h3>Classic Iced-Tea</h3>
                             <!-- img ng ice tea-->
-                            <img src ="" alt="Classic Iced-Tea">
+                            <img src ="classic iced tea.jpg" alt="Classic Iced-Tea">
                             <p>Refreshing brewed tea served chilled over ice for a crisp, revitalizing sip.</p>
                     </div>
 
                     <div class="item Cafe-Mocha">
                         <h3>Cafe Mocha</h3>
                             <!-- img ng mocha -->
-                            <img src="" alt="Cafe Mocha">
+                            <img src="Cafe mocha.jpg" alt="Cafe Mocha">
                             <p>Smooth espresso and creamy milk with a rich chocolate finish.</p>
                     </div>
                 </div>
 
-                <div class="right-items">
+                <div class="right-item">
                     
                     <div class="item Chocolate-Drizzle-Croissant">
                         <h3>Chocolate Drizzle Croissant</h3>
@@ -192,18 +193,24 @@
     <footer class="footer">
         <div class="brand">
             <h2>Sip and Chill</h2>
-            <p>Not like a ordinary cafe.</p>
+            <p>Not like an ordinary cafe.</p>
 
             <!-- Social Media Icons -->   
-            <div class="social Icons">
-                <a href="https://facebook.com"><img src="" alt="Facebook Icon"></a>
-                <a href="https://linkedin.com"><img src="" alt="LinkedIn Icon"></a>                    
-                <a href="https://x.com"><img src="" alt="X Icon"></a>
+            <div class="social-icons">
+                <a href="https://facebook.com">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+                <a href="https://linkedin.com">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>                    
+                <a href="https://x.com">
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                </a>
             </div>
         </div>
 
         <!-- Footer Links -->
-        <div class="Links">
+        <div class="links">
             <div class="column">
                 <h3>Information</h3>
                 <a href="About.html">About Us</a>
@@ -222,5 +229,13 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.querySelectorAll(".FAQ-question").forEach(button => {
+            button.addEventListener("click", () => {
+                button.parentElement.classList.toggle("active");
+            });
+        });
+    </script>
 </body>
 </html>
