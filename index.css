@@ -67,6 +67,13 @@ body{
                     color: #4B2601;
                     border-bottom: 4px solid #0088cc;
                 }
+
+                nav a.current{
+                    color: #4B2601;
+                    font-weight: 700;
+                    border-bottom: 2px solid #4B2601;
+                    padding-bottom: 4px;
+                }
         
         /*nav phone*/
         .nav2{
@@ -104,6 +111,12 @@ body{
             .dropdown-list a:hover {
                 background-color: #FCF5EC;
                 color: #4B2601;
+            }
+
+            .dropdown-list a.current{
+                background-color: #FCF5EC;
+                color: #4B2601;
+                font-weight: 700;
             }
 
 
@@ -208,7 +221,7 @@ body{
         .item img{
             object-fit: contain;
             display: block;
-            margin: auto;
+            margin: 0 auto;
         }
 
         .Iced-Tea img{
@@ -222,9 +235,12 @@ body{
         }
 
         .Chocolate-Drizzle-Croissant img{
-            width: 100%;
-            max-height: 400px;
-            height: 400px;
+            width: 400px;
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 10px;
         }
             
         /*item description*/
@@ -466,7 +482,7 @@ body{
             background-position: center 40%;
         }
         .hero h2{
-            font-size: clamp(24px, 10vw, 44px);
+            font-size: clamp(24px, 9vw, 42px);
         }
         .btn{
             font-size: clamp(11px, 3.4vw, 15px);
@@ -501,44 +517,44 @@ body{
             margin: 20px 12px;
         }
             .featured-grid{
-                grid-template-columns: 1fr 1fr;
-                gap: 10px;
+                grid-template-columns: 1fr;
+                gap: 14px;
             }
 
             .item{
-                min-height: 0;
-                padding: 10px;
+                padding: 12px 16px 16px;
             }
 
             .Iced-Tea,
-            .Cafe-Mocha{
-                height: auto;
-                min-height: 220px;
-            }
-
-            .Iced-Tea img{
-                height: auto;
-                min-width: 140px;
-            }
-            .Cafe-Mocha img{
-                height: auto;
-                min-width: 140px;
-            }
-
+            .Cafe-Mocha,
             .Chocolate-Drizzle-Croissant{
                 height: auto;
-                min-height: 460px;
+                min-height: 0;
             }
 
+            .item h3,
+            .Chocolate-Drizzle-Croissant h3{
+                font-size: 16px;
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+
+            .Iced-Tea img,
+            .Cafe-Mocha img,
             .Chocolate-Drizzle-Croissant img{
-                width: 100%;
+                width: 65%;
+                min-width: 0;
                 height: auto;
-                max-height: 300px;
+                aspect-ratio: 4 / 3;
+                max-height: none;
+                object-fit: cover;
+                border-radius: 10px;
             }
 
             .item p{
-                overflow-wrap: break-word;
                 font-size: 12px;
+                margin-top: 12px;
+                overflow-wrap: break-word;
             }
 
         /*faq*/
@@ -553,11 +569,6 @@ body{
                 font-size: 26px;
             }
 
-            
-
-
-
-        
 
         /*footer*/
         .footer {

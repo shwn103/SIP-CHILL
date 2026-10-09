@@ -67,6 +67,13 @@ body{
                     color: #4B2601;
                     border-bottom: 4px solid #0088cc;
                 }
+
+                nav a.current{
+                    color: #4B2601;
+                    font-weight: 700;
+                    border-bottom: 2px solid #4B2601;
+                    padding-bottom: 4px;
+                }
         
         /*nav phone*/
         .nav2{
@@ -105,6 +112,12 @@ body{
                 background-color: #FCF5EC;
                 color: #4B2601;
             }
+
+            .dropdown-list a.current{
+                background-color: #FCF5EC;
+                color: #4B2601;
+                font-weight: 700;
+            }
             
         /* Hero Section */
         .hero{ 
@@ -128,29 +141,14 @@ body{
                 font-size: clamp(36px, 9vw, 150px);
                 color: white;
             }
-            .btn{
-                display: inline-block;
-                background-color: #4b2601;
-                color: white;
-                text-decoration: none;
-                font-size: clamp(11px, 1.4vw, 22px);
-                border-radius: 0.5em;
-                margin-top: 1.2em;
-                padding: 0.6em 0.9em;
-            }
+
 
         /* About us */
         .about-title{
-            background-color: #ffebdc;
+            background-color: #ffeee1;
             padding: 60px 70px 30px;
         }
 
-            .about-title h2{
-                font-family: 'Inspiration', cursive;
-                font-weight: 400;
-                font-size: 48px;
-                color: #2d241f;
-            }
 
         /* About us (image + text) */
         .about-intro{
@@ -199,7 +197,7 @@ body{
                 padding-left: 25px;            
             }
 
-            .mission-vision h3{
+            .mission-vision h2{
                 font-size: 22px;
                 font-weight: 700;
                 margin-bottom: 8px;
@@ -325,7 +323,36 @@ body{
 
 
     /* Media Queries */
+    /* desktop */
+    @media (min-width: 1280px){
+        .about-title,
+        .about-intro{
+            padding-left: calc((100% - 1000px) / 2);
+            padding-right: calc((100% - 1000px) / 2);
+        }
+        .about-intro{
+            justify-content: center;
+            gap: 60px;
+        }
+    }
 
+    /*stacking for tablet and mobile*/
+    @media (max-width: 1279px){
+        .about-intro{
+            flex-direction: column;
+            align-items: stretch;
+            padding: 0 70px 40px;
+            gap: 20px;
+        }
+        .about-intro img{
+            width: 100%;
+            max-width: none;
+        }
+        .about-intro p{
+            max-width: none;
+        }
+    }
+    
     /*tablet*/
     @media (max-width: 768px){
 
@@ -379,6 +406,16 @@ body{
                 width: 150px;
             }
         
+        .about-title{
+            padding: 30px 20px 15px;
+        }
+        .about-title h2{
+            font-size: 36px;
+        }
+        .about-intro{
+            padding: 0 20px 30px;
+        }
+        
         .mission-vision{
         flex-direction: column;     
         padding: 30px 20px;
@@ -395,8 +432,32 @@ body{
             padding: 20px;              
         }
 
-        .mission-vision h3{
+        .mission-vision h2{
             font-size: 18px;
         }
+
+        /*footer*/
+        .footer {
+            min-height: auto;
+            padding: 30px 20px;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+            .brand {
+                width: 100%;
+            }
+
+            .links {
+                width: 100%;
+                padding-right: 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 25px;
+            }
+
+            .column {
+                min-width: 75px;
+            }
     }
 

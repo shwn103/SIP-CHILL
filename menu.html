@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- fonts pare -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Kodchasan:wght@300&display=swap" rel="stylesheet">
+    <!-- icons pare -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="menu.css">
+    <title>Menu</title>
+</head>
+<body>
+    <header>
+        <!-- Sip and Chill Logo -->
+        <div class="logo">
+            <a href="index.html"><h1>SIP AND CHILL</h1></a>
+            <img src="Sip_And_Chill_Logo.png" alt="Sip and Chill Logo" class="logo-img">
+        </div>
+ 
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html" class="current">Menu</a>
+            <a href="location.html">Location</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <!-- Tablet and Phone -->
+        <div class="nav2">
+            <button class="list-button" onclick="toggleMenu()">
+                ☰
+            </button>
+
+            <div class="dropdown-list" id="dropdownList">
+                <a href="index.html">HOME</a>
+                <a href="about.html" >ABOUT</a>
+                <a href="menu.html" class="current">MENU</a>
+                <a href="location.html">LOCATION</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+            <div class="content">
+                <h2>Menu</h2>
+            </div> 
+    </section>
+
+    
+
+
+    <!-- category --> 
+     <section class="categories"> 
+        <h2>Categories</h2> 
+            <div class="category-list"> 
+                <!--hot drinks-->
+                <a href="#hot-drinks" class="category-item"> 
+                    <img src="Hot .avif" alt="hot-drinks"> 
+                    <span>Hot Drinks</span> 
+                </a> 
+                
+                <!--iced-->
+                <a href="#iced" class="category-item"> 
+                    <img src="Iced-Americano-008.webp" alt="Iced"> 
+                    <span>Iced</span> 
+                </a> 
+                
+                <!--latte-->
+                <a href="#latte" class="category-item"> 
+                    <img src="latte.jpeg" alt="latte"> 
+                    <span>Latte</span> 
+                </a> 
+                
+                <!--frappe-->
+                <a href="#frappe" class="category-item">
+                    <img src="frappe.avif" alt="frappe"> 
+                    <span>Frappe</span> 
+                </a> 
+                
+                <!--refresher-->
+                <a href="#refresher" class="category-item"> 
+                    <img src="refreshener.jpeg" alt="refreser"> 
+                    <span>Refresher</span> 
+                </a> 
+                
+                <!--pastries-->
+                <a href="#pastries" class="category-item"> 
+                    <img src="Chocolate_Drizzled_Croissant.jpeg" alt="pastries"> 
+                    <span>Pastries</span> 
+                </a> 
+            </div> 
+        </section>
+
+        <!-- MENU CONTENT --> 
+        <main class="menu-container"> 
+            <!-- HOT DRINKS --> 
+            <section class="menu-section" id="hot-drinks"> 
+                <h2>Hot Drinks</h2> 
+
+                <div class="menu-grid"> 
+                    <article class="menu-card"> 
+                        <img src="hot coffee.jpg" alt="Hot coffee"> 
+                        
+                        <div class="card-content"> 
+                            <h3>Hot Coffee</h3> 
+                            <p>Smooth, freshly brewed coffee with a rich and comforting aroma.</p> 
+                            <div class="card-bottom"> 
+                                <span class="price">₱90</span> 
+                                <button class="heart" aria-label="Add Hot Coffee to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                    
+                    
+                    <article class="menu-card"> 
+                        <img src="hot chocolate.jpg" alt="Hot chocolate"> 
+                        <div class="card-content"> 
+                            <h3>Hot Chocolate</h3> 
+                            <p>Creamy chocolate blended into a warm, comforting drink.</p> 
+                            <div class="card-bottom"> 
+                                <span class="price">₱105</span> 
+                                <button class="heart" aria-label="Add Hot Chocolate to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                    
+                    <article class="menu-card"> 
+                        <img src="caramel mach.jpg" alt="Caramel Macchiato"> 
+                        <div class="card-content"> 
+                            <h3>Caramel Macchiato</h3> 
+                            <p>Espresso and steamed milk finished with a sweet caramel drizzle.</p> 
+                            <div class="card-bottom"> 
+                                <span class="price">₱125</span> 
+                                <button class="heart" aria-label="Add Caramel Macchiato to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                </div> 
+            </section> 
+            
+            <!-- ICED DRINKS --> 
+             <section class="menu-section" id="iced"> 
+                <h2>Iced</h2> 
+                <div class="menu-grid"> 
+                    <article class="menu-card"> 
+                        <img src="iced tea.jpg" alt="Iced tea"> 
+                        <div class="card-content"> 
+                            <h3>Classic Iced Tea</h3> 
+                            <p>Refreshing brewed tea served chilled over ice for a crisp, revitalizing sip.</p> <div class="card-bottom"> 
+                                <span class="price">₱85</span> 
+                                <button class="heart" aria-label="Add Classic Iced Tea to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                    
+                    <article class="menu-card"> 
+                        <img src="Iced-Americano-008.webp" alt="Iced Americano"> 
+                        <div class="card-content"> 
+                            <h3>Iced Americano</h3> 
+                            <p>Smooth espresso and creamy milk with a rich chocolate finish.</p> 
+                            <div class="card-bottom"> 
+                                <span class="price">₱100</span> 
+                                <button class="heart" aria-label="Add Iced Americano to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                    
+                    <article class="menu-card"> 
+                        <img src="vanilla-coffee.jpg" alt="Iced vanilla coffee"> 
+                        <div class="card-content"> 
+                            <h3>Iced Vanilla Coffee</h3> 
+                            <p>Cards are a great way to organize content into a collection—products, case studies, services, and more.</p> 
+                            <div class="card-bottom"> 
+                                <span class="price">₱120</span> 
+                                <button class="heart" aria-label="Add Iced Vanilla Coffee to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                </div> 
+            </section> 
+            
+            <!-- LATTE --> 
+             <section class="menu-section" id="latte"> 
+                <h2>Latte</h2> 
+                <div class="menu-grid"> 
+                    <article class="menu-card">
+                        <img src="cafe latte.avif" alt="Classic cafe latte"> 
+                        <div class="card-content"> 
+                            <h3>Classic Café Latte</h3> 
+                            <p>Smooth espresso combined with creamy steamed milk.</p> 
+                            <div class="card-bottom"> 
+                                <span class="price">₱115</span> 
+                                <button class="heart" aria-label="Add Classic Café Latte to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+
+                    <article class="menu-card"> 
+                        <img src="vanilla latte.jpg" alt="Vanilla latte"> 
+                        <div class="card-content"> 
+                            <h3>Vanilla Latte</h3> 
+                            <p>Velvety espresso and milk complemented by sweet vanilla.</p> 
+                            <div class="card-bottom"> 
+                                <span class="price">₱125</span> 
+                                <button class="heart" aria-label="Add Vanilla Latte to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                    
+                    <article class="menu-card"> 
+                        <img src="Cafe mocha.jpg" alt="Cafe mocha"> 
+                        <div class="card-content"> 
+                            <h3>Café Mocha</h3> 
+                            <p>Smooth espresso and creamy milk with a rich chocolate finish.</p> 
+                            <div class="card-bottom"> 
+                                <span class="price">₱130</span> 
+                                <button class="heart" aria-label="Add Café Mocha to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                </div> 
+            </section> 
+            
+            <!-- FRAPPE --> 
+             <section class="menu-section" id="frappe"> 
+                <h2>Frappe</h2> 
+                <div class="menu-grid"> 
+                    <article class="menu-card"> 
+                        <img src="java-chip-post.jpg" alt="Java chip"> 
+                        <div class="card-content"> 
+                            <h3>Java Chip</h3> 
+                            <p>Blended iced coffee made with mocha, chips, coffee, milk, finished with whipped and mocha drizzle.</p> 
+                            <div class="card-bottom"> 
+                                <span class="price">₱120</span> 
+                                <button class="heart" aria-label="Add Java Chip to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                    
+                    <article class="menu-card"> 
+                        <img src="salted caramel 2.jpg" alt="Salted caramel">
+                        <div class="card-content"> 
+                            <h3>Salted Caramel</h3> 
+                            <p>Sweet coffee drink made with milk, espresso, and salted caramel syrup.</p> <div class="card-bottom"> 
+                                <span class="price">₱150</span> 
+                                <button class="heart" aria-label="Add Salted Caramel to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                    
+                    <article class="menu-card"> 
+                        <img src="frappe.avif" alt="Matcha"> 
+                        <div class="card-content"> 
+                            <h3>Matcha</h3> 
+                            <p>Cold, blended green tea drink made with matcha powder, milk, ice, and sweetener.</p> 
+                            <div class="card-bottom"> 
+                                <span class="price">₱120</span> 
+                                <button class="heart" aria-label="Add Matcha to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                </div> 
+            </section> 
+            
+            <!-- REFRESHERS --> 
+             <section class="menu-section" id="refresher"> 
+                <h2>Refresher</h2> 
+                <div class="menu-grid"> 
+                    <article class="menu-card"> 
+                        <img src="passionfruit.png" alt="Passion fruit lemonade"> 
+                        <div class="card-content"> 
+                            <h3>Passion Fruit Lemonade</h3> 
+                            <p>Refreshing mix of fresh lemon juice, passion fruit pulp, simple syrup.</p> 
+                            <div class="card-bottom"> 
+                                <span class="price">₱120</span> 
+                                <button class="heart" aria-label="Add Passion Fruit Lemonade to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                    
+                    <article class="menu-card"> 
+                        <img src="refreshener.jpeg" alt="Grape lemonade"> 
+                        <div class="card-content"> 
+                            <h3>Grape Lemonade</h3> 
+                            <p>Sweet and tangy fruit drink that blends the crisp tartness of fresh lemon juice with the rich, bold flavor.</p> 
+                            <div class="card-bottom"> 
+                                <span class="price">₱120</span> 
+                                <button class="heart" aria-label="Add Grape Lemonade to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                    
+                    <article class="menu-card"> 
+                        <img src="coconut matcha.webp" alt="Buko matcha"> 
+                        <div class="card-content"> 
+                            <h3>Buko Matcha</h3> 
+                            <p>Tropical drink that blends earthy Japanese green tea with sweet, hydrating young coconut water.</p> 
+                            <div class="card-bottom"> 
+                                <span class="price">₱500</span> 
+                                <button class="heart" aria-label="Add Buko Matcha to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                </div> 
+            </section> 
+            
+            <!-- PASTRIES --> 
+             <section class="menu-section" id="pastries"> 
+                <h2>Pastries</h2> 
+                <div class="menu-grid"> 
+                    <article class="menu-card"> 
+                        <img src="Chocolate_Drizzled_Croissant.jpeg" alt="Chocolate drizzle croissant"> 
+                        <div class="card-content"> 
+                            <h3>Chocolate Drizzle Croissant</h3> 
+                            <p>Buttery, flaky pastry finished with a generous drizzle of rich chocolate.</p> <div class="card-bottom"> 
+                                <span class="price">₱95</span> 
+                                <button class="heart" aria-label="Add Chocolate Drizzle Croissant to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                    
+                    <article class="menu-card">
+                        <img src="roll.jpeg" alt="Cinnamon roll"> 
+                        <div class="card-content"> 
+                            <h3>Cinnamon Roll</h3> 
+                            <p>Soft and fluffy cinnamon roll topped with a sweet, creamy glaze.</p> 
+                            <div class="card-bottom"> 
+                                <span class="price">₱120</span> 
+                                <button class="heart" aria-label="Add Cinnamon Roll to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                    
+                    <article class="menu-card"> 
+                        <img src="cookie.jpg" alt="Chocolate chip cookies"> 
+                        <div class="card-content"> 
+                            <h3>Chocolate Chip Cookies</h3> 
+                            <p>Warm, chewy cookie packed with delicious chocolate chips.</p> 
+                            <div class="card-bottom"> 
+                                <span class="price">₱70</span> 
+                                <button class="heart" aria-label="Add Chocolate Chip Cookies to favorites" aria-pressed="false">♡</button> 
+                            </div> 
+                        </div> 
+                    </article> 
+                </div> 
+            </section>
+        </main>
+
+
+    
+   
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="brand">
+            <h2>Sip and Chill</h2>
+            <p>Not like an ordinary cafe.</p>
+
+            <!-- Social Media Icons -->   
+            <div class="social-icons">
+                <a href="https://facebook.com">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+                <a href="https://linkedin.com">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>                    
+                <a href="https://x.com">
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="links">
+            <div class="column">
+                <h3>Information</h3>
+                <a href="About.html">About Us</a>
+                <a href="https://linkedin.com">Hiring</a>
+            </div>
+
+            <div class="column">
+                <h3>Inquiries</h3>
+                <a href="Contact.html">Contact Us</a>
+                <a href="index.html#FAQ">FAQ</a>
+            </div>
+
+            <div class="column">
+                <h3>Support</h3>
+                <a href="Contact.html">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for dropdown menu and FAQ toggle -->
+    <script>
+        <!--nav-->
+        function toggleMenu() {
+            const menu = document.getElementById("dropdownList");
+
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        <!--heart-->
+        const hearts = document.querySelectorAll(".heart"); 
+        
+        hearts.forEach(function(heart) { 
+            heart.addEventListener("click", function() { 
+                const isLiked = heart.classList.toggle("liked"); 
+                heart.textContent = isLiked ? "♥" : "♡"; 
+                heart.setAttribute("aria-pressed", isLiked); 
+            }); 
+        });
+       
+    </script>
+
+</body>
+</html>

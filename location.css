@@ -67,6 +67,13 @@ body{
                     color: #4B2601;
                     border-bottom: 4px solid #0088cc;
                 }
+
+                nav a.current{
+                    color: #4B2601;
+                    font-weight: 700;
+                    border-bottom: 2px solid #4B2601;
+                    padding-bottom: 4px;
+                }
         
         /*nav phone*/
         .nav2{
@@ -106,6 +113,12 @@ body{
                 color: #4B2601;
             }
 
+            .dropdown-list a.current{
+                background-color: #FCF5EC;
+                color: #4B2601;
+                font-weight: 700;
+            }
+
         /* Hero Section */
         .hero{ 
             width: 100%;
@@ -125,61 +138,53 @@ body{
             .hero h2{
                 font-family: 'Inspiration', cursive;
                 font-weight: 400;
-                font-size: clamp(36px, 9vw, 150px);
+                font-size: clamp(36px, 15vw, 150px);
                 color: white;
-            }
-            .btn{
-                display: inline-block;
-                background-color: #4b2601;
-                color: white;
-                text-decoration: none;
-                font-size: clamp(11px, 1.4vw, 22px);
-                border-radius: 0.5em;
-                margin-top: 1.2em;
-                padding: 0.6em 0.9em;
             }
     
     /*location-section*/
     .location{
-        min-height: 100vh;
+        min-height: 800px;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 150px;
-        padding: 5px 40px ;
+        gap: clamp(40px, 8vw, 160px);
+        padding: 40px 5% ;
     }
         /*left*/
         .location-info{
-            width: 250px;
+            width: auto;
         }
 
         .title{
-            position: relative;
             display: inline-block;
-            font-size: 29px;
+            font-family: 'Kodchasan', sans-serif;
+            font-size: clamp(32px, 4.2vw, 60px);
             font-weight: 300;
-            letter-spacing: -1.5px;
+            letter-spacing: -2px;
             line-height: 1;
+            text-shadow: 2px 2px 2px #999;
             color: #111111;
-            margin-bottom: 14px;
+            margin-bottom: 0.4em;
         }
 
         /*address*/
         .address{
             color: #666666;
-            font-size: 11px;
-            line-height: 15px;
-            margin-bottom: 23px;
+            font-size: clamp(13px, 1.2vw, 18px);
+            line-height: 1.6;
+            margin-bottom: 1.5em;
         }
 
         .map-button{
             display: inline-flex;
             align-items: center;
-            padding: 7px 10px;
+            padding: 0.6em 1em;
+            font-size: clamp(13px, 1.2vw, 18px);
             background: #5b2c06;
-            color:#ffffff;
+            color: #ffffff;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
         }
 
         .arrow{
@@ -189,8 +194,8 @@ body{
         }
 
         .map{
-            width: 445px;
-            height: 400px;
+            width: clamp(300px, 42vw, 560px);
+            aspect-ratio: 1.1 / 1;
             background: #e1f2fc;
             display: flex;
             align-items: center;
@@ -198,8 +203,9 @@ body{
         }
 
         .pin{
-            width: 400px;
-            height: 350px;
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
         }
 
     
@@ -285,6 +291,20 @@ body{
     /* Media Queries */
 
     /*tablet*/
+    @media (max-width: 1279px){
+        .location{
+            flex-direction: column;
+            align-items: flex-start;
+            min-height: auto;
+            gap: 30px;
+            padding: 40px 70px;
+        }
+        .map{
+            width: 100%;
+            aspect-ratio: 2 / 1;
+        }
+    }
+
     @media (max-width: 768px){
 
         .footer{
@@ -312,7 +332,7 @@ body{
             background-position: center 40%;
         }
         .hero h2{
-            font-size: clamp(24px, 10vw, 44px);
+            font-size: clamp(24px, 20vw, 60px);
         }
 
         .logo h1 {
@@ -336,7 +356,13 @@ body{
             .dropdown-list {
                 width: 150px;
             }
-
+        
+        .location{
+            padding: 30px 20px;
+        }
+        .map{
+            aspect-ratio: 4 / 3;
+        }
 
         /*footer*/
         .footer{
