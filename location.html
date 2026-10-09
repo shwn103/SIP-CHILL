@@ -78,17 +78,6 @@
     </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
     
     <!-- Footer -->
     <footer class="footer">
@@ -130,5 +119,26 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript for dropdown menu and FAQ toggle -->
+    <script>
+        <!--nav-->
+        function toggleMenu() {
+            const menu = document.getElementById("dropdownList");
+
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+        <!--faq drop-->
+        document.querySelectorAll(".FAQ-question").forEach(button => {
+            button.addEventListener("click", () => {
+                button.parentElement.classList.toggle("active");
+            });
+        });
+    </script>
+
 </body>
 </html>

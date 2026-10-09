@@ -108,22 +108,35 @@ body{
 
         /* Hero Section */
         .hero{ 
-            height: 286px;
+            width: 100%;
+            aspect-ratio: 1280 / 407;
             background-image: url('Hero 1.png');
+            background-position: center 40%;
             background-size: cover;
-            background-position: center;
+            background-repeat: no-repeat;
             position: relative;
         }
             .content{
                 position: absolute;
                 left: 9%;
-                top:90px;
+                top: 50%;               
+                transform: translateY(-50%);   
             }
             .hero h2{
                 font-family: 'Inspiration', cursive;
                 font-weight: 400;
-                font-size: 70px;
+                font-size: clamp(36px, 9vw, 150px);
                 color: white;
+            }
+            .btn{
+                display: inline-block;
+                background-color: #4b2601;
+                color: white;
+                text-decoration: none;
+                font-size: clamp(11px, 1.4vw, 22px);
+                border-radius: 0.5em;
+                margin-top: 1.2em;
+                padding: 0.6em 0.9em;
             }
     
     /*location-section*/
@@ -271,9 +284,8 @@ body{
 
     /* Media Queries */
 
-   /*tablet*/
+    /*tablet*/
     @media (max-width: 768px){
-
 
         .footer{
             flex-direction: column;
@@ -284,32 +296,46 @@ body{
     
     /*mobile*/  
     @media (max-width: 480px){
+        body{
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
         /*header, nav, and hero*/
-        .logo h1{
-            font-size: 25px;
+        header {
+        height: 65px;
+        padding: 0 12px;
         }
 
-        .logo-img{
-            width: 65px;
+        .hero{
+            aspect-ratio: 16 / 9;
+            background-position: center 40%;
+        }
+        .hero h2{
+            font-size: clamp(24px, 10vw, 44px);
         }
 
-        nav{
+        .logo h1 {
+            font-size: 22px;
+            letter-spacing: -1px;
+        }
+
+            .logo-img {
+                width: 55px;
+                height: 55px;
+            }
+
+        nav {
             display: none;
-        }
-
-        /*Dropdown*/
-        .nav {
-        display: none;
         }
 
         .nav2 {
             display: block;
         }
 
-        .dropdown-list {
-            width: 150px;
-        }
-
+            .dropdown-list {
+                width: 150px;
+            }
 
 
         /*footer*/

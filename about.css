@@ -119,13 +119,13 @@ body{
             .content{
                 position: absolute;
                 left: 9%;
-                top: 10%;
+                top: 50%;                      
+                transform: translateY(-50%);   
             }
             .hero h2{
                 font-family: 'Inspiration', cursive;
                 font-weight: 400;
-                font-size: 60px;
-                font-size: clamp(26px, 6.5vw, 110px);
+                font-size: clamp(36px, 9vw, 150px);
                 color: white;
             }
             .btn{
@@ -327,38 +327,22 @@ body{
     /* Media Queries */
 
     /*tablet*/
-    @media (max-width: 1279px){
-        .hero{
-            height: 250px;
-        }
+    @media (max-width: 768px){
 
-        .hero-about h2{
-            font-size: 52px;
-        }
-
-        .mission-vision {
-            padding: 40px;
+        .footer{
+            flex-direction: column;
+            gap: 40px;
+            padding: 40px 30px;
         }
     }
-
-    /*mobile*/
+    
+    /*mobile*/  
     @media (max-width: 480px){
-        .hero{
-            height: 190px;
+        body{
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
         }
-
-        .hero .content{
-            left: 7%;
-        }
-
-        .hero h2{
-            font-size: 28px;
-        }
-
-        .hero-about h2{
-            font-size: 32px;
-        }
-        
         /*header, nav, and hero*/
         header {
         height: 65px;
@@ -366,13 +350,11 @@ body{
         }
 
         .hero{
-            aspect-ratio: 4 / 3;
+            aspect-ratio: 16 / 9;
+            background-position: center 40%;
         }
         .hero h2{
             font-size: clamp(24px, 10vw, 44px);
-        }
-        .btn{
-            font-size: clamp(11px, 3.4vw, 15px);
         }
 
         .logo h1 {

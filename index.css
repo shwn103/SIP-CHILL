@@ -357,10 +357,6 @@ body{
     
 
 
-
-
-
-
     /* Footer */
     .footer{
         background-color: #f3e7e7;
@@ -466,7 +462,8 @@ body{
         }
 
         .hero{
-            aspect-ratio: 4 / 3;
+            aspect-ratio: 16 / 9;
+            background-position: center 40%;
         }
         .hero h2{
             font-size: clamp(24px, 10vw, 44px);

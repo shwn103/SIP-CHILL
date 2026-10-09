@@ -109,22 +109,35 @@ body{
 
         /* Hero Section */
         .hero{ 
-            height: 286px;
+            width: 100%;
+            aspect-ratio: 1280 / 407;
             background-image: url('Hero 1.png');
+            background-position: center 40%;
             background-size: cover;
-            background-position: center;
+            background-repeat: no-repeat;
             position: relative;
         }
             .content{
                 position: absolute;
                 left: 9%;
-                top:90px;
+                top: 50%;               
+                transform: translateY(-50%);   
             }
             .hero h2{
                 font-family: 'Inspiration', cursive;
                 font-weight: 400;
-                font-size: 100px;
+                font-size: clamp(36px, 9vw, 150px);
                 color: white;
+            }
+            .btn{
+                display: inline-block;
+                background-color: #4b2601;
+                color: white;
+                text-decoration: none;
+                font-size: clamp(11px, 1.4vw, 22px);
+                border-radius: 0.5em;
+                margin-top: 1.2em;
+                padding: 0.6em 0.9em;
             }
     
         /*Contact section*/
@@ -215,26 +228,6 @@ body{
             }
 
 
-
-
-            
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
     /* Footer */
     .footer{
@@ -319,14 +312,33 @@ body{
 
     /*tablet*/
     @media (max-width: 768px){
+
+        .footer{
+            flex-direction: column;
+            gap: 40px;
+            padding: 40px 30px;
+        }
     }
     
     /*mobile*/  
     @media (max-width: 480px){
+        body{
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
         /*header, nav, and hero*/
         header {
         height: 65px;
         padding: 0 12px;
+        }
+
+        .hero{
+            aspect-ratio: 16 / 9;
+            background-position: center 40%;
+        }
+        .hero h2{
+            font-size: clamp(24px, 10vw, 44px);
         }
 
         .logo h1 {
@@ -351,21 +363,6 @@ body{
                 width: 150px;
             }
 
-        /* Hero */
-        .hero {
-            height: 180px;
-            background-size: cover;
-            background-position: center;
-        }
-
-            .content {
-                left: 8%;
-                top: 45px;
-            }
-
-            .hero h2 {
-                font-size: 65px;
-            }
 
         /* Contact section */
         .contact-section {

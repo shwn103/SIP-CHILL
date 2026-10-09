@@ -89,18 +89,6 @@
         
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
     
     <!-- Footer -->
     <footer class="footer">
@@ -143,6 +131,7 @@
         </div>
     </footer>
 
+    <!-- JavaScript for dropdown menu and FAQ toggle -->
     <script>
         <!--nav-->
         function toggleMenu() {
@@ -154,6 +143,13 @@
                 menu.style.display = "block";
             }
         }
+        <!--faq drop-->
+        document.querySelectorAll(".FAQ-question").forEach(button => {
+            button.addEventListener("click", () => {
+                button.parentElement.classList.toggle("active");
+            });
+        });
     </script>
+
 </body>
 </html>
