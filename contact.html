@@ -76,13 +76,14 @@
         </div>
         
             <!--right-->
-            <form class="contact-form">
-                <input type="text" placeholder="Name" name="name">
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Name" required>
 
-                <input type="email" placeholder="Email" name="email">
+                <input type="email" placeholder="Email" required>
 
-                <textarea placeholder="Leave a Message.." name="message"></textarea>
+                <textarea placeholder="Leave a Message.." required></textarea>
 
+                <button type="submit" class="submit-btn">Submit</button>
             </form>
         </div>
 
@@ -133,7 +134,7 @@
 
     <!-- JavaScript for dropdown menu and FAQ toggle -->
     <script>
-        <!--nav-->
+        // nav //
         function toggleMenu() {
             const menu = document.getElementById("dropdownList");
 
@@ -143,11 +144,17 @@
                 menu.style.display = "block";
             }
         }
-        <!--faq drop-->
+        // faq drop //
         document.querySelectorAll(".FAQ-question").forEach(button => {
             button.addEventListener("click", () => {
                 button.parentElement.classList.toggle("active");
             });
+        });
+        /* contact form */
+        document.getElementById("contactForm").addEventListener("submit", function(e){
+            e.preventDefault();
+            alert("Thank you! Your message has been sent.");
+            this.reset();
         });
     </script>
 

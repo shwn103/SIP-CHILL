@@ -315,6 +315,19 @@ body{
 
     /* Media Queries */
 
+    /* Submit button (should apply to all devices kaya naka labas ) */
+    .submit-btn{
+            align-self: center;                       
+            background-color: #4b2601;
+            color: white;
+            border: none;
+            border-radius: 0.5em;
+            font-size: clamp(14px, 1.4vw, 20px);      
+            padding: 0.7em 2em;                       
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
     /*tablet*/
     @media (max-width: 1279px){
     .contact-section{
@@ -489,6 +502,7 @@ body{
                 color: #888;
                 opacity: 1;
             }
+
 
         /* Footer */
         .footer {
