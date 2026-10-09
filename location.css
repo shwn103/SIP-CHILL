@@ -47,7 +47,7 @@ body{
                 align-items: center;
             }
         
-        /*navigation bar*/
+        /*nav laptop*/
         nav{
             display: flex;
             gap: 28px;
@@ -57,11 +57,53 @@ body{
                     text-decoration: none;
                     color: #2d241f;
                     font-size: 14px;
-                    padding: 5px 0px;
                 }
 
                 nav a:hover{
                     color: #8c8178;
+                }
+
+                nav a:active{
+                    color: #4B2601;
+                    border-bottom: 4px solid #0088cc;
+                }
+        
+        /*nav phone*/
+        .nav2{
+                display: none;
+                position: relative;
+            }
+
+            .list-button{
+                background: none;
+                border: none;
+                font-size: 28px;
+                cursor: pointer;
+                color:#4B2601;
+            }
+
+            .dropdown-list {
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 40px;
+                background-color: #ffffff;
+                width: 160px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+                z-index: 100;
+            }
+
+            .dropdown-list a {
+                display: block;
+                padding: 14px 18px;
+                text-decoration: none;
+                color: #776e67;
+                font-size: 13px;
+            }
+
+            .dropdown-list a:hover {
+                background-color: #FCF5EC;
+                color: #4B2601;
             }
 
         /* Hero Section */
@@ -80,7 +122,7 @@ body{
             .hero h2{
                 font-family: 'Inspiration', cursive;
                 font-weight: 400;
-                font-size: 100px;
+                font-size: 70px;
                 color: white;
             }
     
@@ -90,12 +132,12 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 180px;
-        padding: 40px;
+        gap: 150px;
+        padding: 5px 40px ;
     }
         /*left*/
         .location-info{
-            width: 310px;
+            width: 250px;
         }
 
         .title{
@@ -108,23 +150,44 @@ body{
             color: #111111;
             margin-bottom: 14px;
         }
-        
-    
 
+        /*address*/
+        .address{
+            color: #666666;
+            font-size: 11px;
+            line-height: 15px;
+            margin-bottom: 23px;
+        }
 
+        .map-button{
+            display: inline-flex;
+            align-items: center;
+            padding: 7px 10px;
+            background: #5b2c06;
+            color:#ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
 
+        .arrow{
+            font-size: 14px;
+            margin-left: 4px;
+            line-height: 10px;
+        }
 
+        .map{
+            width: 445px;
+            height: 400px;
+            background: #e1f2fc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-
-
-
-
-
-
-
-
-
-
+        .pin{
+            width: 400px;
+            height: 350px;
+        }
 
     
     /* Footer */
@@ -208,11 +271,55 @@ body{
 
     /* Media Queries */
 
-    /*tablet*/
+   /*tablet*/
     @media (max-width: 768px){
+
+
+        .footer{
+            flex-direction: column;
+            gap: 40px;
+            padding: 40px 30px;
+        }
     }
     
     /*mobile*/  
     @media (max-width: 480px){
+        /*header, nav, and hero*/
+        .logo h1{
+            font-size: 25px;
+        }
+
+        .logo-img{
+            width: 65px;
+        }
+
+        nav{
+            display: none;
+        }
+
+        /*Dropdown*/
+        .nav {
+        display: none;
+        }
+
+        .nav2 {
+            display: block;
+        }
+
+        .dropdown-list {
+            width: 150px;
+        }
+
+
+
+        /*footer*/
+        .footer{
+            padding:35px 25px;
+        }
+
+        .links{
+            flex-wrap: wrap;
+            gap:30px;
+        }
     }   
         

@@ -9,14 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Kodchasan:wght@300&display=swap" rel="stylesheet">
     <!-- icons pare -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="about.css">
     <title>About</title>
 </head>
 <body>
     <header>
         <!-- Sip and Chill Logo -->
         <div class="logo">
-            <a href="index.html"><h1>Sip and Chill</h1></a>
+            <a href="index.html"><h1>SIP AND CHILL</h1></a>
             <img src="Sip_And_Chill_Logo.png" alt="Sip and Chill Logo" class="logo-img">
         </div>
  
@@ -27,31 +27,48 @@
             <a href="location.html">Location</a>
             <a href="contact.html">Contact</a>
         </nav>
+
+        <!-- Tablet and Phone -->
+        <div class="nav2">
+            <button class="list-button" onclick="toggleMenu()">
+                ☰
+            </button>
+
+            <div class="dropdown-list" id="dropdownList">
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="menu.html">MENU</a>
+                <a href="location.html">LOCATION</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </div>
+        
     </header>
 
-    <!-- Hero Section, explore menu, p -->
+    <!-- Hero Section, About Us, p -->
     <section class="hero">
             <div class="content">
-                <h2>A place that<br>
-                feels like home</h2>
-
-                <a href="menu.html" class="btn"><button>Explore Menu</button></a>
+                <h2>About Us</h2>
             </div> 
-            
     </section>
 
+    <section class="about-intro">
+        <img src="about-us.png" alt="Inside Sip and Chill">
+        <p>Sip and Chill is a neighborhood coffee shop, built around one simple idea, good coffee brings people together. We wanted to make a place that feels like home. Somewhere customers can slow down, connect, and sip a well made cup without feeling super rushed. It started as this small notion, then it sort of drifted into something bigger, and honestly we’re glad to call it ours now. We’re really glad you can be a part of it too.</p>
+    </section>
 
-
-
-
-
-
-
-
-
-
-
-
+    <!-- Mission and Vision -->
+     <section class="mission-vision">
+        <div class="mission">
+            <h2>Mission</h2>
+            <p>Our mission is to provide quality coffee in a warm, welcoming environment. We aim to create an experience where every visitor feels comfortable, whether they're catching up with a friend, working quietly, or simply taking a moment for themselves.</p>
+        </div>
+        <div class="vision">
+            <h2>Vision</h2>
+            <p>As we keep growing, we want Sip and Chill to be more than a coffee shop, it should be a place that feels like home for everyone who walks through our doors. We’re excited about supporting local partners, and at the same time holding onto that calm, welcoming vibe we had from the very start, even when things change a bit.
+            </p>
+        </div>
+    </section>
     
     <!-- Footer -->
     <footer class="footer">
@@ -74,7 +91,7 @@
         </div>
 
         <!-- Footer Links -->
-        <div class="Links">
+        <div class="links">
             <div class="column">
                 <h3>Information</h3>
                 <a href="About.html">About Us</a>
@@ -93,5 +110,26 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript for dropdown menu and FAQ toggle -->
+    <script>
+        <!--nav-->
+        function toggleMenu() {
+            const menu = document.getElementById("dropdownList");
+
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+        <!--faq drop-->
+        document.querySelectorAll(".FAQ-question").forEach(button => {
+            button.addEventListener("click", () => {
+                button.parentElement.classList.toggle("active");
+            });
+        });
+    </script>
+    
 </body>
 </html>

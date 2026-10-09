@@ -20,6 +20,7 @@
             <img src="Sip_And_Chill_Logo.png" alt="Sip and Chill Logo" class="logo-img">
         </div>
  
+        <!--Laptop-->
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -27,6 +28,22 @@
             <a href="location.html">Location</a>
             <a href="contact.html">Contact</a>
         </nav>
+
+        <!-- Tablet and Phone -->
+        <div class="nav2">
+            <button class="list-button" onclick="toggleMenu()">
+                ☰
+            </button>
+
+            <div class="dropdown-list" id="dropdownList">
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="menu.html">MENU</a>
+                <a href="location.html">LOCATION</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </div>
+
     </header>
 
     <!-- Hero Section, explore menu, p -->
@@ -81,7 +98,7 @@
     <!-- FAQ section -->
     <section class="FAQ">
         <div class="FAQ-header">
-            <h2 class="FAQ - title">Frequently Asked Questions (FAQs)</h2>
+            <h2 class="FAQ - title">Frequently Asked <br>Questions (FAQs)</h2>
         </div>
 
         <div class = "FAQ-list">
@@ -230,12 +247,25 @@
         </div>
     </footer>
 
+    <!-- JavaScript for dropdown menu and FAQ toggle -->
     <script>
+        <!--nav-->
+        function toggleMenu() {
+            const menu = document.getElementById("dropdownList");
+
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+        <!--faq drop-->
         document.querySelectorAll(".FAQ-question").forEach(button => {
             button.addEventListener("click", () => {
                 button.parentElement.classList.toggle("active");
             });
         });
     </script>
+
 </body>
 </html>

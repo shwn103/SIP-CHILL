@@ -46,8 +46,8 @@ body{
                 object-fit: contain;
                 align-items: center;
             }
-        
-        /*navigation bar*/
+
+        /*nav laptop*/
         nav{
             display: flex;
             gap: 28px;
@@ -57,30 +57,75 @@ body{
                     text-decoration: none;
                     color: #2d241f;
                     font-size: 14px;
-                    padding: 5px 0px;
                 }
 
                 nav a:hover{
                     color: #8c8178;
+                }
+
+                nav a:active{
+                    color: #4B2601;
+                    border-bottom: 4px solid #0088cc;
+                }
+        
+        /*nav phone*/
+        .nav2{
+                display: none;
+                position: relative;
             }
 
+            .list-button{
+                background: none;
+                border: none;
+                font-size: 28px;
+                cursor: pointer;
+                color:#4B2601;
+            }
+
+            .dropdown-list {
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 40px;
+                background-color: #ffffff;
+                width: 160px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+                z-index: 100;
+            }
+
+            .dropdown-list a {
+                display: block;
+                padding: 14px 18px;
+                text-decoration: none;
+                color: #776e67;
+                font-size: 13px;
+            }
+
+            .dropdown-list a:hover {
+                background-color: #FCF5EC;
+                color: #4B2601;
+            }
+            
         /* Hero Section */
         .hero{ 
-            height: 286px;
+            width: 100%;
+            aspect-ratio: 1280 / 407;
             background-image: url('Hero 1.png');
+            background-position: center 40%;
             background-size: cover;
-            background-position: center;
+            background-repeat: no-repeat;
             position: relative;
         }
             .content{
                 position: absolute;
                 left: 9%;
-                top: 30px;
+                top: 10%;
             }
             .hero h2{
                 font-family: 'Inspiration', cursive;
                 font-weight: 400;
                 font-size: 60px;
+                font-size: clamp(26px, 6.5vw, 110px);
                 color: white;
             }
             .btn{
@@ -88,11 +133,116 @@ body{
                 background-color: #4b2601;
                 color: white;
                 text-decoration: none;
-                border-radius: 7px;
-                margin-top: 19px;
-                padding: 10px 14px;
+                font-size: clamp(11px, 1.4vw, 22px);
+                border-radius: 0.5em;
+                margin-top: 1.2em;
+                padding: 0.6em 0.9em;
             }
-    
+
+        /* About us */
+        .about-title{
+            background-color: #ffebdc;
+            padding: 60px 70px 30px;
+        }
+
+            .about-title h2{
+                font-family: 'Inspiration', cursive;
+                font-weight: 400;
+                font-size: 48px;
+                color: #2d241f;
+            }
+
+        /* About us (image + text) */
+        .about-intro{
+            background-color: #ffeee1;
+            padding: 0 70px 60px;
+            display: flex;
+            align-items: center;
+            gap: 70px;
+        }
+
+            .about-intro img{
+                width: 50%;
+                max-width: 480px;
+                border-radius: 12px;
+                display: block;
+            }
+
+            .about-intro p{
+                flex: 1;
+                max-width: 370px;
+                font-size: 13px;
+                line-height: 1.6;
+                color: #5a4a42;
+            }
+
+        /* Mission and Vision */
+        .mission-vision{
+            background-color: white;
+            padding: 55px 70px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+            .mission, .vision{
+                flex: 1;
+                max-width: 380px;
+                padding: 20px;
+                border-radius: 12px;
+                transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                            box-shadow 0.35s ease;
+            }
+
+            .vision{
+                border-left: 1px solid #555;    /* vertical divider */
+                padding-left: 25px;            
+            }
+
+            .mission-vision h3{
+                font-size: 22px;
+                font-weight: 700;
+                margin-bottom: 8px;
+                color: #000;
+            }
+
+            .mission-vision p{
+                font-size: 12px;
+                line-height: 1.6;
+                color: #5a4a42;
+            }
+
+            /* bounce hover */
+            @media (hover: hover){
+                .mission:hover,
+                .vision:hover{
+                    transform: translateY(-8px);
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+                }
+            }
+
+            /* respect "reduce motion" system setting */
+            @media (prefers-reduced-motion: reduce){
+                .mission,
+                .vision{
+                    transition: none;
+                }
+            }
+                    
+            .hero-about{
+                background-image: url('about-us.png');
+                background-position: right center;
+            }
+
+
+            .hero-about .content{
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .hero-about h2{
+                font-size: 64px;
+            }
     
 
     /* Footer */
@@ -177,10 +327,94 @@ body{
     /* Media Queries */
 
     /*tablet*/
-    @media (max-width: 768px){
+    @media (max-width: 1279px){
+        .hero{
+            height: 250px;
+        }
+
+        .hero-about h2{
+            font-size: 52px;
+        }
+
+        .mission-vision {
+            padding: 40px;
+        }
     }
-    
-    /*mobile*/  
+
+    /*mobile*/
     @media (max-width: 480px){
-    }   
+        .hero{
+            height: 190px;
+        }
+
+        .hero .content{
+            left: 7%;
+        }
+
+        .hero h2{
+            font-size: 28px;
+        }
+
+        .hero-about h2{
+            font-size: 32px;
+        }
         
+        /*header, nav, and hero*/
+        header {
+        height: 65px;
+        padding: 0 12px;
+        }
+
+        .hero{
+            aspect-ratio: 4 / 3;
+        }
+        .hero h2{
+            font-size: clamp(24px, 10vw, 44px);
+        }
+        .btn{
+            font-size: clamp(11px, 3.4vw, 15px);
+        }
+
+        .logo h1 {
+            font-size: 22px;
+            letter-spacing: -1px;
+        }
+
+            .logo-img {
+                width: 55px;
+                height: 55px;
+            }
+
+        nav {
+            display: none;
+        }
+
+        .nav2 {
+            display: block;
+        }
+
+            .dropdown-list {
+                width: 150px;
+            }
+        
+        .mission-vision{
+        flex-direction: column;     
+        padding: 30px 20px;
+        gap: 25px;
+        }
+
+        .mission,
+        .vision{
+            max-width: none;
+        }
+
+        .vision{
+            border-left: none;          
+            padding: 20px;              
+        }
+
+        .mission-vision h3{
+            font-size: 18px;
+        }
+    }
+

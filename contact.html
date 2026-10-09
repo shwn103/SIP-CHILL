@@ -9,17 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Kodchasan:wght@300&display=swap" rel="stylesheet">
     <!-- icons pare -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contact.css">
     <title>Contact</title>
 </head>
 <body>
     <header>
         <!-- Sip and Chill Logo -->
         <div class="logo">
-            <a href="index.html"><h1>Sip and Chill</h1></a>
+            <a href="index.html"><h1>SIP AND CHILL</h1></a>
             <img src="Sip_And_Chill_Logo.png" alt="Sip and Chill Logo" class="logo-img">
         </div>
  
+        <!--Laptop-->
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -27,17 +28,65 @@
             <a href="location.html">Location</a>
             <a href="contact.html">Contact</a>
         </nav>
+
+        <!-- Tablet and Phone -->
+        <div class="nav2">
+            <button class="list-button" onclick="toggleMenu()">
+                ☰
+            </button>
+
+            <div class="dropdown-list" id="dropdownList">
+                <a href="index.html">HOME</a>
+                <a href="About.html">ABOUT</a>
+                <a href="Menu.html">MENU</a>
+                <a href="Location.html">LOCATION</a>
+                <a href="Contact.html">CONTACT</a>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section, explore menu, p -->
     <section class="hero">
             <div class="content">
-                <h2>A place that<br>
-                feels like home</h2>
-
-                <a href="menu.html" class="btn"><button>Explore Menu</button></a>
+                <h2>Contact</h2>
             </div> 
             
+    </section>
+
+
+    <section class="contact-section">
+        <!--Left-->
+        <div class="contact-info">
+            <h1>Contact Us</h1>
+
+            <div class="contact-item">
+                <div class="icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <span>sipandchill@gmail.com</span>
+            </div>
+
+            <div class="contact-item">
+                <div class="icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <span>123-456-7890</span>
+            </div>
+        </div>
+        
+            <!--right-->
+            <form class="contact-form">
+                <input type="text" placeholder="Name" name="name">
+
+                <input type="email" placeholder="Email" name="email">
+
+                <textarea placeholder="Leave a Message.." name="message"></textarea>
+
+            </form>
+        </div>
+
+        
     </section>
 
 
@@ -74,7 +123,7 @@
         </div>
 
         <!-- Footer Links -->
-        <div class="Links">
+        <div class="links">
             <div class="column">
                 <h3>Information</h3>
                 <a href="About.html">About Us</a>
@@ -93,5 +142,18 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        <!--nav-->
+        function toggleMenu() {
+            const menu = document.getElementById("dropdownList");
+
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
