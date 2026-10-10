@@ -201,7 +201,7 @@ body{
             }
 
                 .menu-section h2{
-                    font-family: 'Inspiration', cursive;
+                    font-family: Cursive;
                     font-weight: 400;
                     font-size: clamp(26px, 2.5vw, 34px);
                     color: #2d241f;
